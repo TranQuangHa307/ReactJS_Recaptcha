@@ -9,19 +9,26 @@ import '../assets/css/pace.min.css';
 import '../assets/css/bootstrap.min.css';
 import '../assets/css/app.css';
 import '../assets/css/icons.css';
-import Login from './Login';
 import Footer from './Footer';
+
+import {BrowserRouter as Router} from 'react-router-dom';
+
+import DieuHuongURL from '../Router/DieuHuongURL';
 
 class App extends Component {
   render() {
     return (
-      <div className="bg-login">
-	        <div className="wrapper">
-            <Header/>
-            <Login/>
-            <Footer/>
-          </div>
-      </div>
+      <Router>
+        <div className="bg-login">
+            <div className="wrapper">
+
+              <Header/>
+                      <DieuHuongURL/>
+              <Footer/>
+
+            </div>
+        </div>
+      </Router>
     );
   }
 }
